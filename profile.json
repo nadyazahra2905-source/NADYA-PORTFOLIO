@@ -1,0 +1,26 @@
+{
+  "name": "Nadya Kurni Azzahra",
+  "description": "A graduate of Politeknik Negeri Semarang, majoring in Instrumentation and Control Systems, with a strong interest in research and development. Has hands-on experience as an intern at PT Cakrawala Sakti Kencana in the Engineering Division and at CV Sarana Cipta Media in the R&D Division. Skilled in system analysis, testing, and troubleshooting of technical systems. Known for being systematic, detail-oriented, and an effective team player in solving technical problems.",
+  "profileImage": "images/profile.jpeg",
+  "email": "nadya.zahra2905@gmail.com",
+  "phone": "+62 895 0658 0602",
+  "socialMedia": [
+    {
+      "platform": "Twitter: @nadyakurni6547",
+      "url": "https://x.com/Nadyakurni6547"
+    },
+    {
+      "platform": "Instagram: @nady.za_",
+      "url": "https://www.instagram.com/nady.za_?igsh=YXdlNGhrdGxtZmVk"
+    }
+  ],
+  "cv": {
+    "text": "View CV",
+    "file": "docs/cv.pdf"
+  },
+  "skills": [
+    { "name": "Maintenance and Troubleshooting of Electronic and Instrumentation Systems" },
+    { "name": "Microcontroller Programming (Arduino)" },
+    { "name": "Electronic Circuit Schematic Design" }
+  ]
+}

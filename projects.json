@@ -1,0 +1,20 @@
+[
+  {
+    "title": "Water Level Monitoring System (HC-SR04 & AO2YYUW UART)",
+    "year": "2025",
+    "category": "Instrumentation & Control System",
+    "role": "Project Team Member",
+    "description": "Designed and implemented a water level monitoring system using ultrasonic sensors. Conducted sensor calibration, data acquisition, and data analysis. Assisted in system testing and performance evaluation.",
+    "image": "images/profile2.jpeg",
+    "link": ""
+  },
+  {
+    "title": "Water Level Implementation with Window Comparator",
+    "year": "2025",
+    "category": "Analog Electronics Project",
+    "role": "Project Team Member",
+    "description": "Designed and implemented a water level detection system using a window comparator circuit. Configured upper and lower threshold voltages to classify water levels. Conducted circuit testing, calibration, and performance evaluation.",
+    "image": "images/profile3.jpeg",
+    "link": ""
+  }
+]
