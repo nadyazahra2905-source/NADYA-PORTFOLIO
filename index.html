@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="An elegant editable engineering portfolio.">
+    <title>Nadya Kurni Azzahra | Portfolio</title>
+    <link rel="icon" type="image/x-icon" href="images/favicon.ico">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header class="topbar">
+        <a class="brand" href="#home" id="brand-name">Portfolio</a>
+        <nav aria-label="Main navigation">
+            <a href="#about" id="nav-about">About</a>
+            <a href="#experience" id="nav-experience">Experience</a>
+            <a href="#projects" id="nav-projects">Projects</a>
+            <a href="#contact" id="nav-contact">Contact</a>
+        </nav>
+        <button class="icon-button" id="open-editor" type="button" title="Edit portfolio" aria-label="Edit portfolio">✎</button>
+    </header>
+
+    <main>
+        <section class="hero" id="home">
+            <div class="hero-media"><img id="profile-image" src="" alt="Profile photo"></div>
+            <div class="hero-copy">
+                <p class="eyebrow" id="hero-eyebrow"></p>
+                <h1 id="profile-name"></h1>
+                <p class="hero-role" id="profile-role"></p>
+                <p class="hero-summary" id="profile-summary"></p>
+                <div class="hero-actions">
+                    <a class="button primary" id="contact-button" href="#contact">Contact Me</a>
+                    <a class="button secondary" id="cv-link" href="#" target="_blank">View CV</a>
+                </div>
+                <div class="social-links" id="social-links"></div>
+            </div>
+        </section>
+
+        <section class="section about" id="about">
+            <div class="section-heading">
+                <h2 id="about-heading">About & Skills</h2>
+            </div>
+            <div class="about-grid">
+                <p class="about-text" id="about-text"></p>
+                <div class="about-side">
+                    <div class="profile-details" id="profile-details"></div>
+                    <div class="skills" id="skills"></div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section" id="experience">
+            <div class="section-heading">
+                <h2 id="experience-heading">Experience & Education</h2>
+            </div>
+            <div class="timeline-columns">
+                <div><h3 class="column-title" id="experience-column-heading">Experience</h3><div class="timeline" id="experience-list"></div></div>
+                <div><h3 class="column-title" id="education-column-heading">Education</h3><div class="timeline" id="education-list"></div></div>
+            </div>
+        </section>
+
+        <section class="section projects-section" id="projects">
+            <div class="section-heading">
+                <h2 id="projects-heading">Selected Projects</h2>
+            </div>
+            <div class="project-filters" id="project-filters"></div>
+            <div class="projects-grid" id="projects-grid"></div>
+        </section>
+
+        <section class="contact section" id="contact">
+            <h2 id="contact-title"></h2>
+            <p id="contact-copy"></p>
+            <div class="contact-actions">
+                <a class="button primary" id="email-link" href="#"></a>
+                <a class="button secondary" id="phone-link" href="#"></a>
+            </div>
+        </section>
+    </main>
+
+    <footer><p>© <span id="current-year"></span> <span id="footer-name"></span>.</p></footer>
+
+    <dialog class="editor" id="editor-dialog">
+        <form method="dialog" class="editor-shell">
+            <div class="editor-header">
+                <div><p class="eyebrow">Settings</p><h2>Edit Portfolio</h2></div>
+                <button class="icon-button" value="cancel" title="Close" aria-label="Close">×</button>
+            </div>
+            <p class="editor-note">Fill in the form below, then press Save Changes. Data will be saved in this browser.</p>
+            <div class="editor-options">
+                <label>Template style
+                    <select id="layout-select">
+                        <option value="clean">Elegant</option>
+                        <option value="editorial">Editorial</option>
+                        <option value="compact">Compact</option>
+                    </select>
+                </label>
+                <label>Accent color <input id="accent-input" type="color"></label>
+            </div>
+            <div class="editor-tabs" role="tablist">
+                <button type="button" class="editor-tab active" data-tab="profile">Profile</button>
+                <button type="button" class="editor-tab" data-tab="experience">Experience</button>
+                <button type="button" class="editor-tab" data-tab="education">Education</button>
+                <button type="button" class="editor-tab" data-tab="projects">Projects</button>
+            </div>
+            <div class="editor-panels">
+                <section class="editor-panel active" data-panel="profile">
+                    <div class="form-grid">
+                        <label>Full name <input id="edit-name" type="text"></label>
+                        <label>Role / position <input id="edit-role" type="text"></label>
+                        <label class="full-field">Opening line <input id="edit-eyebrow" type="text"></label>
+                        <div class="full-field field-group">
+                            <div class="field-label-row">
+                                <label for="edit-summary">Short summary</label>
+                                <button class="text-button danger" id="clear-summary" type="button">Clear summary</button>
+                            </div>
+                            <textarea id="edit-summary" rows="3"></textarea>
+                        </div>
+                        <label class="full-field">About me <textarea id="edit-about" rows="4"></textarea></label>
+                        <div class="full-field editor-subsection">
+                            <div class="field-label-row">
+                                <h3>Profile details</h3>
+                                <button class="text-button" id="add-profile-detail" type="button">+ Add detail</button>
+                            </div>
+                            <p class="editor-help">Examples: location, field, language, or professional status. Every detail can be edited or removed.</p>
+                            <div class="repeat-list" id="profileDetails-editor"></div>
+                        </div>
+                        <label>Email <input id="edit-email" type="email"></label>
+                        <label>Phone number <input id="edit-phone" type="text"></label>
+                        <label>Photo path <input id="edit-photo" type="text"></label>
+                        <label>CV path <input id="edit-cv" type="text"></label>
+                        <label class="full-field">Skills <textarea id="edit-skills" rows="4" placeholder="One skill per line"></textarea></label>
+                        <label class="full-field">Social media <textarea id="edit-socials" rows="3" placeholder="LinkedIn | https://linkedin.com/... (one per line)"></textarea></label>
+                        <label class="full-field">Contact title <input id="edit-contact-title" type="text"></label>
+                        <label class="full-field">Contact message <textarea id="edit-contact-copy" rows="2"></textarea></label>
+                    </div>
+                </section>
+                <section class="editor-panel" data-panel="experience">
+                    <div class="repeat-list" id="experience-editor"></div>
+                    <button class="button secondary add-item" id="add-experience" type="button">+ Add Experience</button>
+                </section>
+                <section class="editor-panel" data-panel="education">
+                    <div class="repeat-list" id="education-editor"></div>
+                    <button class="button secondary add-item" id="add-education" type="button">+ Add Education</button>
+                </section>
+                <section class="editor-panel" data-panel="projects">
+                    <div class="repeat-list" id="projects-editor"></div>
+                    <button class="button secondary add-item" id="add-project" type="button">+ Add Project</button>
+                </section>
+            </div>
+            <p class="editor-status" id="editor-status" role="status"></p>
+            <div class="editor-actions">
+                <label class="button secondary file-button">Import JSON<input id="import-json" type="file" accept="application/json"></label>
+                <button class="button secondary" id="export-json" type="button">Export JSON</button>
+                <button class="button secondary danger" id="reset-data" type="button">Reset</button>
+                <button class="button primary" id="apply-data" type="button">Save Changes</button>
+            </div>
+        </form>
+    </dialog>
+
+    <script src="js/portofolio-data.js"></script>
+    <script src="js/script.js"></script>
+</body>
+</html>
